@@ -1,0 +1,17 @@
+#
+#   Copyright (C) NullPotOS Project.
+#   All rights reserved.
+#
+#   Follow GNU-GPL 3.0
+#
+
+BUILD=cmake
+
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
+
+rm -rf Build
+
+$BUILD . -B Build -G Ninja
+mkdir -p Build/Image/EFI/BOOT
+mkdir -p Build/Image/NullPotOS/System

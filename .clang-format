@@ -1,0 +1,55 @@
+---
+BasedOnStyle: LLVM
+Language: Cpp
+Standard: c++20
+
+
+
+DisableFormat: false
+SortIncludes: true
+
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+IndentCaseLabels: true
+
+ColumnLimit: 120
+AlignAfterOpenBracket: AlwaysBreak
+AlignConsecutiveDeclarations: true
+AlignTrailingComments: true
+AllowAllParametersOfDeclarationOnNextLine: false
+
+PointerAlignment: Right
+DerivePointerAlignment: false
+
+AlwaysBreakTemplateDeclarations: Yes
+SpaceAfterTemplateKeyword: true
+BreakBeforeBraces: Attach
+BraceWrapping:
+  AfterClass:      true
+  AfterControlStatement: Never
+  AfterEnum:       true
+  AfterFunction:   true
+  AfterNamespace:  true
+  AfterStruct:     true
+
+BreakConstructorInitializers: BeforeColon
+ConstructorInitializerIndentWidth: 8
+
+BreakBeforeBinaryOperators: NonAssignment
+
+AlignArrayOfStructures: Right
+
+SpaceBeforeCpp11BracedList: true
+SpaceInEmptyBlock: false
+
+ReflowComments: true
+CommentPragmas: '^ IWYU pragma:'
+
+IncludeCategories:
+  - Regex:           '^<.*\.h>'
+    Priority:        2
+  - Regex:           '^<.*'
+    Priority:        1
+  - Regex:           '.*'
+    Priority:        3
