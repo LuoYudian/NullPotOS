@@ -1,0 +1,21 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "Dev" ]
+  pull_request:
+    branches: [ "Dev" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install
+      run: sudo apt-get update && sudo apt-get install -y cmake clang llvm lld ninja-build xorriso mtools lldb qemu-system
+    - name: Configure
+      run: ./Configure
+    - name: Build
+      run: ninja -C Build -j 24
