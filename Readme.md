@@ -33,6 +33,7 @@ NullPotOS is use NullPotOS Kernel(NPKernel).
 ### Start
 
 ``` Shell
+# This is configure process
 chmod u+x ./Configure
 ./Confiure
 ```
@@ -49,6 +50,21 @@ ninja # You can use -j options to speed up the build process
 ``` Shell
 # In the Build dir
 ninja run
+```
+
+### Clean
+
+``` Shell
+# In the Build dir
+# This is clean the build
+ninja clean
+```
+
+and
+
+``` Shell
+# This is clean the entire build directory
+rm -rf Build
 ```
 
 ## Thank
