@@ -41,7 +41,7 @@ chmod u+x ./Configure
 
 ``` Shell
 cd Build
-ninja # You need -j options
+ninja # You can use -j options to speed up the build process
 ```
 
 ### Run
@@ -50,8 +50,6 @@ ninja # You need -j options
 # In the Build dir
 ninja run
 ```
-
-
 
 ## Thank
 

@@ -46,5 +46,5 @@ add_subdirectory(Src)
 add_custom_target(
     run 
 
-    COMMAND qemu-system-x86_64 -bios ../Assets/Firmware/Uefi.fd -m 2048    
+    COMMAND qemu-system-x86_64 -bios ../Assets/Firmware/Uefi.fd -m 2048 -net none -drive file=fat:rw:${CMAKE_BINARY_DIR}/Image,index=0,format=vvfat -serial file:${CMAKE_BINARY_DIR}/run.log
 )
