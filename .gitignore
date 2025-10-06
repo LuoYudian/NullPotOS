@@ -1,0 +1,20 @@
+#
+#    Copyright (C) 2025 LuoYudian, 
+#    All rights reserved.
+#  
+#    Date:
+#        2025.10.6
+#
+
+# NullPotOS build directory
+./build/
+
+# NullPotOS build files
+*.o
+*.elf
+
+# NullPotOS image
+*.iso
+
+# macOS cache file
+*.DS_Store
